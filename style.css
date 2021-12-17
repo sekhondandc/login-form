@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: #292929;
+    font-family: 'Open Sans',sans-serif;
+}
+.background{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.shape{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+}
+.shape:first-child{
+    background: linear-gradient(to top, #38aaa4, #d7eae9);
+    right: -100px;
+    top: -100px
+}
+.shape:last-child{
+    background: linear-gradient(to right, #ff512f, #f09819);
+    left: -40px;
+    bottom: -80px;
+}
+.form{
+    height: 300px;
+    width: 400px;
+    background: rgba(0,0,0,0.1);
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    padding: 30px 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+}
+.field-group{
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.input-field{
+    width: 100%;
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid #999999;
+    padding: 10px 0;
+    background: transparent;
+    font-size: 1em;
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+.input-label{
+    display: block;
+    position: absolute;
+    top: 0;
+    font-size: 1em;
+    color: #999999;
+    transition: 0.3s ease;
+}
+.input-button{
+    outline: none;
+    border: none;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 15px 0;
+    font-size: 1em;
+    color: #ffffff;
+    cursor: pointer;
+}
+.input-field::placeholder{
+    color: transparent;
+}
+.input-field:placeholder-shown ~ .input-label{
+    font-size: 1em;
+    top: 20px;
+}
+.input-field:focus{
+    border-image: linear-gradient(to right, #ef5a03, #d1d357);
+    border-image-slice: 1;
+}
+.input-field:focus ~ .input-label{
+    display: block;
+    position: absolute;
+    top: 0;
+    font-size: 1em;
+    color: #ef5a03;
+}
